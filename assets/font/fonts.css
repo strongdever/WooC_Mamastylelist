@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Oswald:wght@200;300;400;500;600;700&family=Public+Sans:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: 'YuGothic';
+    src: url('YuGothB.ttc') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'YuGothic';
+    src: url('YuGothM.ttc') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'YuGothic';
+    src: url('YuGothR.ttc') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'YuGothic';
+    src: url('YuGothL.ttc') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'AB-clip_medium';
+    src: url('AB-clip_medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
