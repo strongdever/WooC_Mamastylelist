@@ -58,6 +58,8 @@
     position: relative;
   }
   
+  
+
   main#main {
     overflow: hidden;
   }
@@ -315,14 +317,15 @@
     width: -moz-fit-content;
     width: fit-content;
     min-width: 24.0rem;
-    padding: 1.6rem 2.0rem 1.6rem 2.4rem;
-    background: #FBFBFB;
+    padding: 2.0rem 5.6rem;
+    border-radius: 10rem;
+    background: #40C2BF;
     font-family: "DNP ShueiMGoStd";
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 2.6rem;
     letter-spacing: 0.08em;
-    color: #3E3A39;
+    color: #fff;
     text-align: left;
     white-space: nowrap;
     text-decoration: none;
@@ -342,6 +345,10 @@
       padding: 1.6rem 2.0rem 1.6rem 2.4rem;
     }
   }
+
+  .btn i {
+    margin-left: 1rem;
+  }
   
   .btn span {
     position: relative;
@@ -353,106 +360,33 @@
     padding-top: 0.2rem;
     z-index: 3;
   }
-  
-  .btn svg {
-    position: relative;
-    display: inline-block;
-    width: 2.4rem;
-    height: auto;
-    text-decoration: none;
-    margin-left: 2.0rem;
-    z-index: 3;
-  }
-  
-  .btn svg path {
-    -webkit-transition: all 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    transition: all 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-  }
-  
+
   .btn.bg-gray {
     background: #EDEDED;
   }
-  
-  .btn.out-link svg {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-  }
-  
-  .btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    background: #3E3A39;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    transition: -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1), -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    -webkit-transform-origin: right top;
-            transform-origin: right top;
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
-    z-index: 1;
-  }
-  
-  .btn:hover {
-    color: #FFFFFF;
-  }
-  
-  .btn:hover svg path {
-    stroke: #FFFFFF;
-  }
-  
-  .btn:hover::before {
-    -webkit-transform-origin: left top;
-            transform-origin: left top;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  
-  .dark-btn {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 37.5rem;
-    max-width: 100%;
-    padding: 1.8rem 2.4rem 1.8rem 2.4rem;
-    background: #3E3A39;
-    font-family: "DNP ShueiMGoStd";
-    font-size: 1.8rem;
-    line-height: 3.0rem;
-    letter-spacing: 0.08em;
-    color: #FFFFFF;
-    text-align: center;
-    white-space: nowrap;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    -webkit-transition: background 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    transition: background 0.6s cubic-bezier(0.8, 0, 0.2, 1);
-    overflow: hidden;
-    cursor: pointer;
-    z-index: 0;
-  }
-  
+
   @media only screen and (max-width: 768px) {
     .dark-btn {
       max-width: 33.5rem;
       width: 100%;
       padding: 1.8rem 2.4rem 1.8rem 2.4rem;
     }
+  }
+
+  .btn:hover .bounce {
+    animation: bounce 0.8s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    30% {
+      transform: translateX(15px);
+    }
+    /* 60% {
+      transform: translateX(12px);
+    } */
   }
   
   .dark-btn span {
@@ -1269,6 +1203,10 @@
     right: 0;
   }
 
+  body {
+    background-color: #fff !important;
+  }
+
   .mainvisual {
     position: relative;
     margin-top: 13rem;
@@ -1303,7 +1241,7 @@
     -webkit-box-align: center;
       -ms-flex-align: center;
         align-items: center;
-    border-radius: 6px;
+    border-radius: 0.6rem;
     border: 1px solid #40C2BF;
   }
 
@@ -1337,7 +1275,7 @@
   }
 
   .search-bar button {
-    border-radius: 0 0.6rem 0.6rem 0;
+    border-radius: 0 0.4rem 0.4rem 0;
     background-color: #40C2BF;
     width: 5rem;
     height: 5rem;
@@ -1345,4 +1283,843 @@
 
   .search-bar button i {
     font-size: 2.4rem;
+  }
+
+  .recommend-style {
+    display: -webkit-box;
+      display: -ms-flexbox;
+        display: flex;
+    width: 100%;
+    position: relative;
+  }
+
+  .recommend-style .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 7.3rem 14rem;
+      padding: 9.6rem 11rem ;
+    background-color: #F8F8F8;
+    border-radius: 2.4rem;
+  }
+
+  .main-title {
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    font-family: "AB-clip_medium";
+    font-size: 4.8rem;
+    font-weight: 800;
+    letter-spacing: 0.125em;
+    color: #13A4A0;
+  }
+
+  .recommend-style .container .main-title {
+    margin-left: -1rem;
+  }
+
+  .recommend-style .container .sub-text {
+    display: -webkit-flex;
+      display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+  }
+
+  .recommend-style .container .middleschool {
+    margin-bottom: 10rem;
+  }
+
+  .recommend-style .container .sub-text {
+    margin-top: 7.2rem;
+    margin-bottom: 4.0rem;
+  }
+
+  .recommend-style .container .sub-text img {
+    width: 2.2rem;
+    margin-right: 1.2rem;
+  }
+
+  .sub-title {
+    font-family: "DNP ShueiMGoStd";
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #333333;
+  }
+
+  .product-list {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0px, 1fr))[3];
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-column-gap: 8rem;    
+  }
+
+  .product-list li {
+    position: relative;
+  }
+
+  .product {
+    position: relative;
+  }
+
+  .product .thumb {
+    position: relative;
+    width: 100%;
+  }
+
+  .product .price-wrap {
+    position: relative;
+    width: 100%;
+    margin: 1.6rem 0;
+    display: -webkit-flex;
+      display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+  }
+
+  .product .price-wrap .pre-text {
+    color: #333;
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-right: 0.4rem;
+  }
+
+  .product .price-wrap .price {
+    color: #333;
+    font-family: "DIN 2014 Bold";
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.3rem;
+  }
+
+  .product .product-cat {
+    color: #fff;
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 800;
+    font-size: 1.4rem;
+    padding: 0.6rem 0.8rem;
+    background-color: #F4983D;
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+  }
+
+  .situation-choose {
+    position: relative;
+    width: 100%;
+    background-color: #40C2BF;
+    padding: 8rem 14rem;
+  }
+
+  .situation-choose .main-title {
+    margin-bottom: 4.2rem;
+    color: #fff;
+  }
+
+  .situation-choose .product-in-situation {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0px, 1fr))[3];
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    grid-column-gap: 4rem;    
+  }
+
+  .situation-choose .product-in-situation li {
+    position: relative;
+  }
+
+  .situation-choose .product-in-situation li .thumb {
+    position: relative;
+    width: 100%;
+    border-radius: 1.2rem;
+  }
+
+  .situation-choose .product-in-situation li .situation {
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    position: absolute;
+    text-wrap: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 800;
+    font-size: 2.0rem;
+    color: #fff;
+    line-height: 2.4rem;
+  }
+
+  @media print, screen and (max-width: 1440px) {
+    .situation-choose .product-in-situation li .situation {
+      font-size: 1.6rem;
+    }
+  }
+
+  .situation-choose .product-in-situation li .thumb-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    border-radius: 1.2rem;
+    opacity: 0.4;
+  }
+
+  .choosing-section {
+    position: relative;
+    padding: 12rem 14rem;
+    background-color: #fff;
+  }
+
+  .like-products {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10.7rem;
+  }
+
+  .like-products .main-title {
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    margin-bottom: 6.4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .like-products .like-list {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0px, 1fr))[3];
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    grid-column-gap: 4rem;   
+    grid-row-gap: 2.4rem;   
+  }
+
+  .like-products .like-list li {
+    position: relative;
+  }
+
+  .like-products .like-list li .like-item {
+    display: -webkit-flex;
+      display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+    -webkit-box-flex: center;
+      -ms-text-justify: center;
+        justify-content: center;
+    position: relative;
+    width: 100%;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    text-align: left;
+    letter-spacing: 0.08em;
+    color: #333;
+    border: 2px solid #264C56;
+    border-radius: 1.2rem;
+  }
+
+  .like-products .like-list li .like-item.active {
+    background-color: #323232;
+    color: #fff;
+  }
+  
+  .popular-product .main-title {
+    margin-bottom: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .popular-product .product-list {
+    -ms-grid-columns: (minmax(0px, 1fr))[5];
+    grid-template-columns: repeat(5, minmax(0px, 1fr));
+    grid-column-gap: 3.2rem; 
+  }
+
+  .popular-product .product-list li .mark {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    border-radius: 50rem;
+    font-family: "DIN 2014";
+    font-weight: 800;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+      display: flex;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+    -webkit-box-flex: center;
+      -ms-text-justify: center;
+        justify-content: center;
+    color: #fff;
+  }
+
+  .mark.order1 {
+    background-color: #C59D61;
+  }
+
+  .mark.order2 {
+    background-color: #A4A3A3;
+  }
+
+  .mark.order3 {
+    background-color: #752100;
+  }
+
+  .mark.order4 {
+    background-color: #333333;
+  }
+
+  .mark.order5 {
+    background-color: #333333;
+  }
+
+  .cheering-section {
+    padding: 8rem 14rem;
+    background-color: #F8F8F8;
+  }
+
+  .cheering-section .header {
+    position: relative;
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    height: -webkit-fit-content;
+      height: -moz-fit-content;
+        height: fit-content;
+    margin: 0 auto 2.4rem auto;
+    position: relative;
+    display: -webkit-box;
+      display: -ms-flexbox;
+        display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+  }
+
+  .cheering-section .header .desc {
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 1.6rem;
+    margin-right: 0.6rem;
+  }
+
+  .cheering-section .header img {
+    width: 1.6rem;
+  }
+
+  .cheering-section .main-title {
+    position: relative;
+    margin: 0 auto 6.4rem auto;
+  }
+
+  .cheering-section .cheering-part {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0px, 1fr))[3];
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-column-gap: 3.2rem;    
+  }
+
+  .cheering-part li {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.8rem;
+  }
+
+  .cheering-part li a {
+    position: relative;
+    width: 100%;
+  }  
+
+  .cheering-part li a .thumb {
+    position: relative;
+    width: 100%;
+    border-radius: 0.8rem 0.8rem 0 0;
+  }  
+
+  .cheering-part li a .text-wrapper {
+    position: relative;
+    padding: 2.4rem 2rem;
+  }
+
+  .cheering-part li a .title {
+    position: relative;
+    margin: 0 0 1.2rem 0;
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;   
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #333;
+  }
+
+  @media print, screen and (max-width: 1440px) {
+    .cheering-part li a .title {
+      width: 90%;
+    }
+  }
+
+  .cheering-part li a .last-text {
+    position: relative;
+    display: -webkit-box;
+      display: -ms-flexbox;
+        display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .cheering-part li a .last-text .method {
+    position: relative;
+    display: -webkit-box;
+      display: -ms-flexbox;
+        display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.6rem 1.6rem;
+    border: 1px solid #F4983D;
+    border-radius: 50px;
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-align: left;
+    letter-spacing: 0.08em;
+    color: #F4983D;
+    margin-right: 1.2rem;
+  }
+
+  .cheering-part li a .last-text .date {
+    position: relative;
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-align: left;
+    letter-spacing: 0.08em;
+    color: #909090;
+    margin-right: 1.2rem;
+  }
+
+  .latest-section {
+    position: relative;
+    padding: 12.8rem 14rem;
+  }
+
+  .latest-section .main-title {
+    margin-bottom: 6.8rem;
+  }
+
+  .latest-section        .product-list {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0px, 1fr))[5];
+    grid-template-columns: repeat(5, minmax(0px, 1fr)) !important;
+    grid-column-gap: 3.2rem; 
+  }
+
+  #footer {;
+    position: relative;
+  }
+
+  #footer .container {
+    position: relative;
+    width: 100% !important;
+    max-width: 100%;
+    background-color: #F8F8F8;
+    margin: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-nav .nav-menu {
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    margin: 0 auto 0.8rem auto;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "DNP ShueiMGoStd";
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .footer-nav .nav-menu li:not(:last-child) {
+    margin-right: 4rem;
+  }
+
+  .copyright {
+    position: relative;
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    color: #333;
+    text-align: center;
+    font-family: DNP ShueiMGoStd;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .status-bar {
+    position: relative;
+    width: 100%;
+    height: -webkit-fit-content;
+      height: -moz-fit-content;
+        height: fit-content;
+    margin-top: 13rem;
+    background-color: #F8F8F8;
+  }
+
+  .status-bar .nav-status {
+    position: relative;
+    display: -webkit-box;
+      display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    max-width: 192rem;
+    padding-left: 4.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4rem;
+    color: #264C56;
+  }
+
+  .status-bar .nav-status h4 {
+    font-family: "DNP ShueiMGoStd";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4rem; /* 100% */
+  }
+
+  .status-bar .nav-status i {
+    color: #9E9E9E;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  .mamasta {
+    position: relative;
+    width: 100%;
+    padding: 7.2rem 14rem 11.5rem 8.8rem;
+  }
+
+  .mamasta .top-header {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6.4rem;
+    color: #333;
+    text-align: center;
+    font-family: "DNP ShueiMGoStd";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 5rem; /* 93.75% */
+    letter-spacing: 0.192em;
+  }
+
+  .mamasta .top-header span {
+    font-size: 4.0rem;
+    color: #13A4A0;
+  }
+
+  .mamasta .first-view {
+    position: relative;
+    width: 100%;
+    margin-bottom: 9.6rem;
+  }
+
+  .mamasta .first-view img {
+    position: relative;
+    width: 100%;
+  }
+
+  .mamasta .content .title {
+    position: relative;
+    color: #333;
+    text-align: center;
+    font-family: "DNP ShueiMGoStd";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.0rem; /* 93.75% */
+    letter-spacing: 0.192em;
+    
+  }
+
+  .mamasta .content .title p:not(:first-child) {
+    vertical-align: text-bottom;
+    display: flex;                   /* defines flexbox */
+    align-items: flex-end; 
+    justify-content: center;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.6rem;
+  }
+
+  .mamasta .content .title img {
+    position: relative;
+    width: 33.2rem;
+  }
+
+  .mamasta .content .desc {
+    position: relative;
+    margin: 4rem auto;
+    text-align: center;
+    color: #333;
+    font-family: "DNP ShueiMGoStd";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .mamasta .btns {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btns .btn:first-child {
+    margin-right: 2.4rem;
+  }
+
+  .students-product {
+    padding: 8rem 24.8rem;
+  }
+
+  .students-product .sub-title {
+    margin-bottom: 6.4rem;
+  }
+
+  .students-product .search-part {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 9.8rem;
+  }
+
+  .students-product .search-part .search-bar {
+    width: 32rem;
+    margin-right: 1.6rem;
+  }
+
+  .students-product .search-part .search-label {
+    position: relative;
+    color: #333;
+    text-align: center;
+    font-family: "DNP ShueiMGoStd";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem; /* 93.75% */
+  }
+
+  .students-product .sortby {
+    position: relative;
+    margin-bottom: 2.4rem;
+  }
+
+  .students-product .sortby .sortby-tabs {
+    position: relative;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-content: flex-end;
+    
+  }
+
+  .students-product .sortby .sortby-tabs li {
+    position: relative;
+    width: -webkit-fit-content;
+      width: -moz-fit-content;
+        width: fit-content;
+    height: -webkit-fit-content;
+      height: -moz-fit-content;
+        height: fit-content;
+  }
+
+  .students-product .sortby .sortby-tabs li:not(:last-child) {
+    padding: 0 1.2rem;
+    border-right: 1px solid #E4E4E4;
+  }
+
+  .students-product .sortby .sortby-tabs li:last-child {
+    padding-left: 1.2rem;
+  }
+
+  .students-product .sortby .sortby-tabs li .sortby-item {
+    color: #333;
+    font-family: "DNP ShueiMGoStd";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem; /* 93.75% */
+  }
+
+  .students-product .pagination {
+    position: relative;
+    margin: 2.6rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+    justify-content: space-between;
+  }
+
+  .students-product .pagination .display-number {
+    color: #333;
+    font-family: "DNP ShueiMGoStd";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6rem; /* 100% */
+  }
+
+  .students-product .pagination .pagination-bar {
+    display: -webkit-box;
+      display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+  }
+
+  .students-product .pagination .pagination-bar li {
+    position: relative;
+    margin-left: 1.6rem;
+  }
+
+  .students-product .pagination .pagination-bar li a {
+    position: relative;
+    width: 2.8rem;
+    height: 3.2rem;
+    color: ;
+    display: -webkit-box;
+      display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .students-product .pagination .pagination-bar li a.page-num {
+    color: #333;
+    font-family: "DNP ShueiMGoStd";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4rem /* 100% */
+  }
+
+  .students-product .pagination .pagination-bar li a.before,
+  .students-product .pagination .pagination-bar li a.next {
+    color: #000000;
+    font-size: 1.4rem;
+  }
+
+  .students-product .pagination .pagination-bar li a.active {
+    background-color: #40C2BF;
+    border-radius: 0.4rem;
+    color: #fff;
+  }
+
+  .students-product .product-list {
+    -ms-grid-columns: (minmax(0px, 1fr))[4];
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
   }

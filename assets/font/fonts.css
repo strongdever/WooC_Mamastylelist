@@ -15,22 +15,22 @@
 }
 
 @font-face {
-    font-family: 'YuGothic';
-    src: url('YuGothR.ttc') format('truetype');
+    font-family: 'Kinto Sans';
+    src: url('KintoSans-Black.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'YuGothic';
-    src: url('YuGothL.ttc') format('truetype');
+    font-family: 'DIN 2014 Demi';
+    src: url('DIN2014-DemiBold.ttf') format('truetype');
     font-style: normal;
     font-weight: 300;
 }
 
 @font-face {
-    font-family: 'Helvetica';
-    src: url('Helvetica.ttf') format('truetype');
+    font-family: 'DIN 2014 Bold';
+    src: url('DIN2014-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
 }
