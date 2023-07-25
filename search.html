@@ -138,41 +138,137 @@
                 <h4>詳細検索</h4>
             </div>
         </section>
-        <section class="mamasta">
+        
+        <section class="search-wrap">
             <div class="container">
-                <div></div>
-                <div class="top-header">中高生男子のお子様を持つママへ！<br>
-                    こんな <span>お悩み</span> ありませんか？
-                </div>
-                <figure class="first-view">
-                    <img src="/assets/img/mamasta-background.webp">
-                </figure>
-                <div class="content">
-                    <div class="title">
-                        <p>そんなママの洋服選びのお手伝いをするのが、<br></p>
-                        <p><img class="logo" src="/assets/img/logo.png">です！</p>
-                    </div>
-                    <div class="desc">
-                        男の子ママのための洋服選び「ママはスタイリスト」は、そんなお母さんのために洋服を<br>
-                        シーン別に上下セットで紹介し、悩まずに買うことができるサイトです。<br><br>
-                        中学生男子と高校生男子のシーン別の洋服がセットで表示されていますので、<br>
-                        お子さんの洋服選びにお役立てください！
-                    </div>
-                    <ul class="btns">
+                <h2 class="sub-title">
+                    詳細検索
+                </h2>
+
+                <div class="gradeby-wrap wraper">
+                    <h3 class="wrap-title">学年</h3> 
+                    <ul class="grade-wrap">
                         <li>
-                            <a class="btn" href="">
-                                中学生男子の服はこちら<i class="fa fa-angle-right bounce"></i>
-                            </a>
+                            <input type="radio" id="middle" name="grade" value="中学生男子">
+                            <label for="middle">中学生男子</label>
                         </li>
                         <li>
-                            <a class="btn" href="">
-                                高校生男子の服はこちら<i class="fa fa-angle-right bounce"></i>
-                            </a>
+                            <input type="radio" id="high" name="grade" value="高校生男子">
+                            <label for="high">高校生男子</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="situationby wraper">
+                    <h3 class="wrap-title">シチュエーション</h3> 
+                    <ul class="cat-list">
+                        <li>
+                            <a class="cat-item active"><span>男友達と遊びに行くとき</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>学校行事の私服のとき</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>女子もいる遊びのとき</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>デートのとき</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="genreby wraper">
+                    <h3 class="wrap-title">ジャンル</h3> 
+                    <ul class="cat-list">
+                        <li>
+                            <a class="cat-item active"><span>綺麗めカジュアル系</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>モード系</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>ストリート系</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>キャラクター系</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>韓国風男子系</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>ナチュラル系</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>アメカジ系</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>アウトドア系</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="priceby wraper">
+                    <h3 class="wrap-title">価格</h3> 
+                    <ul class="cat-list">
+                        <li>
+                            <a class="cat-item active"><span>～¥4,999</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>¥5,000～¥9,999</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>¥10,000〜¥14,999</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>¥15,000〜¥20,000</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>¥20,000〜¥29,999</span></a>
+                        </li>
+                        <li>
+                            <a class="cat-item"><span>¥30,000〜</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="parameter-wrap wraper">
+                    <h3 class="wrap-title">選択中の条件</h3>
+                    <ul class="parameter-list">
+                        <li class="parameter-item">
+                            <div class="parameter">
+                                <span>男友達と遊びに行くとき</span>
+                                <i class="fas fa-times-circle" style="color: #F4983D;"></i>
+                            </div>
+                        </li>
+                        <li class="parameter-item">
+                            <div class="parameter">
+                                <span>綺麗めカジュアル系</span>
+                                <i class="fas fa-times-circle" style="color: #F4983D;"></i>
+                            </div>
+                        </li>
+                        <li class="parameter-item">
+                            <div class="parameter">
+                                <span>¥5,000～¥9,999</span>
+                                <i class="fas fa-times-circle" style="color: #F4983D;"></i>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
+            <ul class="btns">
+                <li>
+                    <a class="btn allclear" href="">
+                        すべてクリア
+                    </a>
+                </li>
+                <li>
+                    <a class="btn search" href="">
+                        検索する（10件）<i class="fa fa-angle-right bounce"></i>
+                    </a>
+                </li>
+            </ul>
         </section>
+   
     </main>
 
     <footer id="footer">
