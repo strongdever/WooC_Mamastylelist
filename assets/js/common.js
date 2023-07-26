@@ -14,6 +14,12 @@
         } else {
             $('.header').height('13rem');
         }
+
+        if ($(this).scrollTop() > 150) {
+            $('.mobile-header').height('8rem');
+        } else {
+            $('.mobile-header').height('10rem');
+        }
     });
 
     $('.back-to-top').click(function () {
@@ -35,7 +41,6 @@
     if ($(window).scrollTop() > 150) {
         $('#header').addClass('header-scrolled');
     }
-
 
     // Smooth scroll for the navigation menu and links with .scrollto classes
     var scrolltoOffset = $('#header').outerHeight() - 1;
