@@ -22,7 +22,7 @@ body {
 }
 
 body.rtl {
-	font-family: Tahoma, "Times New Roman", "Bitstream Charter", Times, serif;
+	font-family: Tahoma, "Noto Sans JP", "Bitstream Charter", Times, serif;
 }
 
 body.locale-he-il,
